@@ -23,6 +23,10 @@ class ResumeRequest(BaseModel):
 
 RESUME_PATH = "resume.json"
 
+@app.get("/")
+def root():
+    return {"message": "Hello from FastAPI on Vercel!"}
+
 @app.post("/ai-enhance")
 def ai_enhance(req: EnhanceRequest):
     # Mock enhancement
